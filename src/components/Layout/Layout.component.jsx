@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Navbar } from '../Header/Navbar/navbar.component';
+import { Header } from '../Header/header.component';
+
+import '../../assets/styles/global.scss';
 
 export const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
+      <Header />
       {children}
     </>
   );

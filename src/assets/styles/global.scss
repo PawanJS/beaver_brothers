@@ -1,0 +1,38 @@
+//* Importing fonts
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('../fonts/OpenSauceSans-Bold.woff') format('woff2'),
+    url('../fonts/OpenSauceSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('../fonts/OpenSauceSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSauceSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sauce Sans', sans-serif;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}

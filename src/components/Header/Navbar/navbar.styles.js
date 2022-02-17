@@ -48,6 +48,7 @@ export const LogoText = styled.div`
   line-height: 32px;
   font-weight: 700;
   letter-spacing: -1px;
+  font-family: 'Open Sauce Sans', sans-serif;
 `;
 
 export const NavigationLine = styled.div`
@@ -64,6 +65,7 @@ export const Email = styled.a`
   line-height: 24px;
   font-weight: 400;
   text-decoration: none;
+  font-family: 'Open Sauce Sans', sans-serif;
 `;
 
 export const NavMenu = styled.div`

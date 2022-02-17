@@ -13,7 +13,7 @@ export const Navbar = () => {
             <Styled.Brand to="/">
               <StaticImage
                 style={Styled.Logo}
-                src="../../../images/navigation/logo.svg"
+                src="../../../assets/images/navigation/logo.svg"
                 alt="Netzila Logo"
                 placeholder="blurred"
                 layout="fixed"
