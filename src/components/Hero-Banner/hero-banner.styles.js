@@ -74,3 +74,148 @@ export const HeroParagraph = styled.p`
   line-height: 32px;
   letter-spacing: -0.03em;
 `;
+
+export const ButtonPrimary = styled(Link)`
+  margin-top: 32px;
+  display: flex;
+  min-height: 48px;
+  padding: 12px 10px 12px 32px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eff1f5;
+  background-color: #26534c;
+  transition: background-color 300ms ease;
+  font-family: Inter, sans-serif;
+  color: #fff;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #1c3f3a;
+  }
+`;
+
+export const ButtonArrow = {
+  marginLeft: 24,
+};
+
+export const HeroDetails = styled.div`
+  margin-top: 100px;
+  color: #485b60;
+  line-height: 24px;
+`;
+
+export const HeroImage = styled.div`
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #ece8d9;
+`;
+
+export const HeroPerson = {
+  position: 'relative',
+  zIndex: 2,
+};
+
+export const HeroCard = styled.div`
+  position: absolute;
+  left: -76px;
+  top: auto;
+  right: auto;
+  bottom: 56px;
+  z-index: 5;
+  display: flex;
+  padding: 28px 32px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 51px 51px 72px -12px rgba(117, 114, 104, 0.16);
+  animation: bounce 1.3s infinite alternate;
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-18px);
+    }
+  }
+`;
+
+export const HeroCardStar = {
+  marginRight: 24,
+};
+
+export const UiCardHeading = styled.h5`
+  color: #102226;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+`;
+
+export const UiCardText = styled.p`
+  font-family: Inter, sans-serif;
+  color: #485b60;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+`;
+
+export const HeroCTABlock = styled.div`
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: -15%;
+  bottom: auto;
+  z-index: 5;
+  display: flex;
+  width: 180px;
+  min-height: 300px;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: #1c3f3a;
+`;
+
+export const CTABg = {
+  position: 'absolute',
+  top: 0,
+  right: 0,
+};
+
+export const HeroCTAText = styled.div`
+  font-family: Inter, sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  white-space: pre-wrap;
+`;
+
+export const BrandSpan = styled.span`
+  color: #ece8d9;
+`;
+
+export const NavBannerButton = styled(Link)`
+  display: flex;
+  margin-top: 32px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  align-items: center;
+  color: #ece8d9;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+`;
+
+export const ArrowSmall = {
+  marginLeft: 4,
+};

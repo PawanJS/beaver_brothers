@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const NavBar = styled.div`
-export   position: absolute;
+  position: absolute;
   left: 0%;
   top: 0%;
   right: 0%;
@@ -12,7 +12,7 @@ export   position: absolute;
   padding-right: 5%;
   padding-left: 5%;
   align-items: stretch;
-  background-color: transparent;
+  z-index: 1000;
 `;
 
 export const NavContainer = styled.div`
