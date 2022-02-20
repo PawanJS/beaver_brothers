@@ -1,15 +1,41 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import * as Styled from './hero-banner.styles';
 
 export const HeroBanner = () => {
+  const data = useStaticQuery(graphql`
+    query HeroBannerQuery {
+      markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
+        id
+        frontmatter {
+          category
+          CTALink
+          CTAText
+          HeroBannerBrand
+          HeroBannerCTALink
+          HeroBannerCTAText
+          HeroBannerText
+          UiCardHeading
+          UiCardText
+          subtitle
+          tagLine
+          title
+          welcomeText
+        }
+      }
+    }
+  `);
+
+  const Hero = data.markdownRemark.frontmatter;
+
   return (
     <Styled.Hero>
       <Styled.Container>
         <Styled.HeroGrid>
           <Styled.HeroContent>
-            <Styled.HeadingNormal>Welcome to Netzila</Styled.HeadingNormal>
+            <Styled.HeadingNormal>{Hero.welcomeText}</Styled.HeadingNormal>
             <Styled.HeroTitleWrapper>
               <StaticImage
                 style={Styled.HeroStar}
@@ -20,15 +46,11 @@ export const HeroBanner = () => {
                 width={124}
                 height={124}
               />
-              <Styled.HeroTitle>
-                Elevate your brand with Netzila
-              </Styled.HeroTitle>
+              <Styled.HeroTitle>{Hero.title}</Styled.HeroTitle>
             </Styled.HeroTitleWrapper>
-            <Styled.HeroParagraph>
-              Unlimited design subscriptions to your business.
-            </Styled.HeroParagraph>
-            <Styled.ButtonPrimary to="#">
-              Get Started
+            <Styled.HeroParagraph>{Hero.subtitle}</Styled.HeroParagraph>
+            <Styled.ButtonPrimary to={Hero.CTALink}>
+              {Hero.CTAText}
               <StaticImage
                 style={Styled.ButtonArrow}
                 src="../../assets/images/hero/chevron-right.svg"
@@ -39,7 +61,7 @@ export const HeroBanner = () => {
                 height={24}
               />
             </Styled.ButtonPrimary>
-            <Styled.HeroDetails>Design you'll 💛 guaranteed</Styled.HeroDetails>
+            <Styled.HeroDetails>{Hero.tagLine}</Styled.HeroDetails>
           </Styled.HeroContent>
           <Styled.HeroImage>
             <StaticImage
@@ -60,8 +82,10 @@ export const HeroBanner = () => {
                 height={56}
               />
               <div>
-                <Styled.UiCardHeading>+480</Styled.UiCardHeading>
-                <Styled.UiCardText>Happy Customer</Styled.UiCardText>
+                <Styled.UiCardHeading>
+                  {Hero.UiCardHeading}
+                </Styled.UiCardHeading>
+                <Styled.UiCardText>{Hero.UiCardText}</Styled.UiCardText>
               </div>
             </Styled.HeroCard>
             <Styled.HeroCTABlock>
@@ -73,10 +97,11 @@ export const HeroBanner = () => {
                 layout="constrained"
               />
               <Styled.HeroCTAText>
-                Start growing with <Styled.BrandSpan>Netzila</Styled.BrandSpan>
+                {Hero.HeroBannerText}
+                <Styled.BrandSpan>{Hero.HeroBannerBrand}</Styled.BrandSpan>
               </Styled.HeroCTAText>
-              <Styled.NavBannerButton to="#">
-                Learn More
+              <Styled.NavBannerButton to={Hero.HeroBannerCTALink}>
+                {Hero.HeroBannerCTAText}
                 <StaticImage
                   style={Styled.ArrowSmall}
                   src="../../assets/images/hero/chevron-right.svg"
