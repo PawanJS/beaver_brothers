@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import * as Styled from './hero-banner.styles';
@@ -8,7 +8,6 @@ export const HeroBanner = () => {
   const data = useStaticQuery(graphql`
     query HeroBannerQuery {
       markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
-        id
         frontmatter {
           category
           CTALink
@@ -19,10 +18,16 @@ export const HeroBanner = () => {
           HeroBannerText
           UiCardHeading
           UiCardText
-          subtitle
-          tagLine
-          title
-          welcomeText
+          Subtitle
+          TagLine
+          Title
+          WelcomeText
+          Cover {
+            base
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
@@ -35,7 +40,7 @@ export const HeroBanner = () => {
       <Styled.Container>
         <Styled.HeroGrid>
           <Styled.HeroContent>
-            <Styled.HeadingNormal>{Hero.welcomeText}</Styled.HeadingNormal>
+            <Styled.HeadingNormal>{Hero.WelcomeText}</Styled.HeadingNormal>
             <Styled.HeroTitleWrapper>
               <StaticImage
                 style={Styled.HeroStar}
@@ -46,9 +51,9 @@ export const HeroBanner = () => {
                 width={124}
                 height={124}
               />
-              <Styled.HeroTitle>{Hero.title}</Styled.HeroTitle>
+              <Styled.HeroTitle>{Hero.Title}</Styled.HeroTitle>
             </Styled.HeroTitleWrapper>
-            <Styled.HeroParagraph>{Hero.subtitle}</Styled.HeroParagraph>
+            <Styled.HeroParagraph>{Hero.Subtitle}</Styled.HeroParagraph>
             <Styled.ButtonPrimary to={Hero.CTALink}>
               {Hero.CTAText}
               <StaticImage
@@ -61,15 +66,13 @@ export const HeroBanner = () => {
                 height={24}
               />
             </Styled.ButtonPrimary>
-            <Styled.HeroDetails>{Hero.tagLine}</Styled.HeroDetails>
+            <Styled.HeroDetails>{Hero.TagLine}</Styled.HeroDetails>
           </Styled.HeroContent>
           <Styled.HeroImage>
-            <StaticImage
+            <GatsbyImage
               style={Styled.HeroPerson}
-              src="../../assets/images/hero/hero-person.png"
-              alt="Hero Person"
-              placeholder="blurred"
-              layout="constrained"
+              image={Hero.Cover.childImageSharp.gatsbyImageData}
+              alt={Hero.Cover.base}
             />
             <Styled.HeroCard>
               <StaticImage
