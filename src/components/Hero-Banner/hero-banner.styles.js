@@ -95,11 +95,16 @@ export const ButtonPrimary = styled(Link)`
 
   &:hover {
     background-color: #1c3f3a;
+
+    .button_arrow {
+      transform: translateX(4px);
+    }
   }
 `;
 
 export const ButtonArrow = {
-  marginLeft: 24,
+  marginLeft: 20,
+  transition: 'transform 0.3s ease-in-out',
 };
 
 export const HeroDetails = styled.div`
@@ -214,8 +219,15 @@ export const NavBannerButton = styled(Link)`
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration: none;
+
+  &:hover {
+    .button_arrow {
+      transform: translateX(4px);
+    }
+  }
 `;
 
 export const ArrowSmall = {
   marginLeft: 4,
+  transition: 'transform 0.3s ease-in-out',
 };

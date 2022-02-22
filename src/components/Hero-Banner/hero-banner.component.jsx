@@ -10,7 +10,7 @@ export const HeroBanner = () => {
       markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
         frontmatter {
           category
-          CTALink
+          Slug
           CTAText
           HeroBannerBrand
           HeroBannerCTALink
@@ -54,9 +54,10 @@ export const HeroBanner = () => {
               <Styled.HeroTitle>{Hero.Title}</Styled.HeroTitle>
             </Styled.HeroTitleWrapper>
             <Styled.HeroParagraph>{Hero.Subtitle}</Styled.HeroParagraph>
-            <Styled.ButtonPrimary to={Hero.CTALink}>
+            <Styled.ButtonPrimary to={Hero.Slug}>
               {Hero.CTAText}
               <StaticImage
+                className="button_arrow"
                 style={Styled.ButtonArrow}
                 src="../../assets/images/hero/chevron-right.svg"
                 alt="Arrow"
@@ -101,11 +102,12 @@ export const HeroBanner = () => {
               />
               <Styled.HeroCTAText>
                 {Hero.HeroBannerText}
-                <Styled.BrandSpan>{Hero.HeroBannerBrand}</Styled.BrandSpan>
+                <Styled.BrandSpan> {Hero.HeroBannerBrand}</Styled.BrandSpan>
               </Styled.HeroCTAText>
               <Styled.NavBannerButton to={Hero.HeroBannerCTALink}>
                 {Hero.HeroBannerCTAText}
                 <StaticImage
+                  className="button_arrow"
                   style={Styled.ArrowSmall}
                   src="../../assets/images/hero/chevron-right.svg"
                   alt="Star Image"
