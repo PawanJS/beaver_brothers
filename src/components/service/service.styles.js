@@ -28,16 +28,6 @@ export const StarStd = {
   zIndex: -1,
 };
 
-export const Heading = styled.h3`
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: #102226;
-  font-size: 48px;
-  line-height: 56px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-`;
-
 export const ServiceGrid = styled.div`
   display: grid;
   margin-right: auto;
@@ -145,4 +135,12 @@ export const ButtonTextRemove = styled.div`
 export const ButtonArrowSmall = {
   marginLeft: 4,
   transition: 'transform 0.3s ease-in-out',
+};
+
+export const Scribble = {
+  position: 'absolute',
+  left: 'auto',
+  top: '-5%',
+  right: '-20%',
+  bottom: 'auto',
 };

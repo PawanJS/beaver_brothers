@@ -58,7 +58,7 @@ export const Service = () => {
             width={124}
             height={124}
           />
-          <Styled.Heading>{Service.Title}</Styled.Heading>
+          <h3 className="heading-3">{Service.Title}</h3>
         </Styled.TitleWrapper>
         <Styled.ServiceGrid>
           {data.allMarkdownRemark.edges.map((service) => (
@@ -91,7 +91,7 @@ export const Service = () => {
               />
               <Styled.ButtonText>
                 <Styled.ButtonTextRemove className="button_text_remove">
-                  Learn More
+                  {service.node.frontmatter.CTAText}
                 </Styled.ButtonTextRemove>
                 <StaticImage
                   className="button_arrow_small"
@@ -107,6 +107,15 @@ export const Service = () => {
             </Styled.ServiceCard>
           ))}
         </Styled.ServiceGrid>
+        <StaticImage
+          style={Styled.Scribble}
+          src="../../assets/images/service/service-bg.svg"
+          alt="scribble Image"
+          placeholder="blurred"
+          layout="fixed"
+          width={184}
+          height={184}
+        />
       </Styled.ContainerSmall>
     </Styled.Service>
   );

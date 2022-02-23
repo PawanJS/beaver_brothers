@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CustomerSection = styled.section`
   display: flex;
-  padding: 60px 5%;
+  padding: 100px 5%;
   justify-content: center;
   align-items: center;
 `;
