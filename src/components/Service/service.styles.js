@@ -6,13 +6,6 @@ export const Service = styled.section`
   padding: 50px 3%;
 `;
 
-export const ContainerSmall = styled.div`
-  position: relative;
-  max-width: 920px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
 export const TitleWrapper = styled.div`
   position: relative;
   max-width: 490px;

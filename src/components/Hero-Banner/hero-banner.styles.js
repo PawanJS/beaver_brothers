@@ -8,15 +8,6 @@ export const Hero = styled.section`
   padding-left: 5%;
 `;
 
-export const Container = styled.div`
-  position: relative;
-  z-index: 5;
-  width: 100%;
-  max-width: 1060px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
 export const HeroGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

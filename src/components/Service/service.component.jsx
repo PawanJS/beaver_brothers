@@ -47,11 +47,11 @@ export const Service = () => {
 
   return (
     <Styled.Service>
-      <Styled.ContainerSmall>
+      <div className="container-small">
         <Styled.TitleWrapper>
           <StaticImage
             style={Styled.StarStd}
-            src="../../assets/images/service/title-bg.svg"
+            src="../../assets/images/global/star.svg"
             alt="Star Image"
             placeholder="blurred"
             layout="fixed"
@@ -96,7 +96,7 @@ export const Service = () => {
                 <StaticImage
                   className="button_arrow_small"
                   style={Styled.ButtonArrowSmall}
-                  src="../../assets/images/service/arrow.svg"
+                  src="../../assets/images/global/arrow-green.svg"
                   alt="Branding Image"
                   placeholder="blurred"
                   layout="fixed"
@@ -109,14 +109,14 @@ export const Service = () => {
         </Styled.ServiceGrid>
         <StaticImage
           style={Styled.Scribble}
-          src="../../assets/images/service/service-bg.svg"
+          src="../../assets/images/global/squiggle.svg"
           alt="scribble Image"
           placeholder="blurred"
           layout="fixed"
           width={184}
           height={184}
         />
-      </Styled.ContainerSmall>
+      </div>
     </Styled.Service>
   );
 };

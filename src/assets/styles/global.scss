@@ -59,6 +59,16 @@ img {
   letter-spacing: -0.03em;
 }
 
+.heading-4 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #102226;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
 .heading-5 {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -67,4 +77,36 @@ img {
   line-height: 40px;
   font-weight: 700;
   letter-spacing: -0.03em;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1060px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-large {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-small {
+  position: relative;
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-extra-small {
+  position: relative;
+  max-width: 620px;
+  margin-right: auto;
+  margin-left: auto;
 }

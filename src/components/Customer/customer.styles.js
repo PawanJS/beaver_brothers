@@ -7,15 +7,6 @@ export const CustomerSection = styled.section`
   align-items: center;
 `;
 
-export const ContainerLarge = styled.div`
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 1280px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
 export const CustomerLogoGrid = styled.div`
   display: grid;
   grid-auto-columns: 1fr;

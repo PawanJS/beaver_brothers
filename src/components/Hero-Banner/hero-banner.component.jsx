@@ -37,14 +37,14 @@ export const HeroBanner = () => {
 
   return (
     <Styled.Hero>
-      <Styled.Container>
+      <div className="container">
         <Styled.HeroGrid>
           <Styled.HeroContent>
             <Styled.HeadingNormal>{Hero.WelcomeText}</Styled.HeadingNormal>
             <Styled.HeroTitleWrapper>
               <StaticImage
                 style={Styled.HeroStar}
-                src="../../assets/images/hero/star.svg"
+                src="../../assets/images/global/star.svg"
                 alt="Star Image"
                 placeholder="blurred"
                 layout="fixed"
@@ -59,7 +59,7 @@ export const HeroBanner = () => {
               <StaticImage
                 className="button_arrow"
                 style={Styled.ButtonArrow}
-                src="../../assets/images/hero/chevron-right.svg"
+                src="../../assets/images/global/arrow-white.svg"
                 alt="Arrow"
                 placeholder="blurred"
                 layout="fixed"
@@ -109,7 +109,7 @@ export const HeroBanner = () => {
                 <StaticImage
                   className="button_arrow"
                   style={Styled.ArrowSmall}
-                  src="../../assets/images/hero/chevron-right.svg"
+                  src="../../assets/images/global/arrow-cream.svg"
                   alt="Star Image"
                   placeholder="blurred"
                   layout="fixed"
@@ -120,7 +120,7 @@ export const HeroBanner = () => {
             </Styled.HeroCTABlock>
           </Styled.HeroImage>
         </Styled.HeroGrid>
-      </Styled.Container>
+      </div>
     </Styled.Hero>
   );
 };

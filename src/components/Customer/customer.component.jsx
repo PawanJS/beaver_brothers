@@ -35,7 +35,7 @@ export const Customer = () => {
 
   return (
     <Styled.CustomerSection>
-      <Styled.ContainerLarge>
+      <div className="container-large">
         <Styled.CustomerLogoGrid>
           {Customer.map(({ node }) => (
             <GatsbyImage
@@ -46,7 +46,7 @@ export const Customer = () => {
             />
           ))}
         </Styled.CustomerLogoGrid>
-      </Styled.ContainerLarge>
+      </div>
     </Styled.CustomerSection>
   );
 };

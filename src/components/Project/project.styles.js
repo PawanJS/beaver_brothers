@@ -6,15 +6,6 @@ export const ProjectSection = styled.section`
   padding: 100px 3%;
 `;
 
-export const Container = styled.div`
-  position: relative;
-  z-index: 5;
-  width: 100%;
-  max-width: 1060px;
-  margin-right: auto;
-  margin-left: auto;
-`;
-
 export const TitleWrapper = styled.div`
   position: relative;
   display: flex;
@@ -134,6 +125,11 @@ export const ProjectStarSmall = { width: '48px' };
 export const Heading = styled.h5`
   margin-bottom: 8px;
   color: #f1f3f3;
+  margin-top: 0px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 `;
 
 export const ProjectDetails = styled.p`
