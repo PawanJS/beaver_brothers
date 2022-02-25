@@ -54,7 +54,7 @@ export const Project = () => {
             <StaticImage
               style={Styled.StarStd}
               src="../../assets/images/global/star.svg"
-              alt="Project Image"
+              alt="Star Image"
               placeholder="blurred"
               layout="fixed"
               width={124}

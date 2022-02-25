@@ -6,7 +6,9 @@ import { Customer } from '../components/Customer/customer.component';
 import { Service } from '../components/Service/service.component';
 import { Project } from '../components/Project/project.component';
 import { Process } from '../components/Process/process.component';
-import { Award } from '../components/award/award.component';
+import { Award } from '../components/Award/award.component';
+import { Testimonial } from '../components/Testimonial/testimonial.component';
+import { CTA } from '../components/CTA/cta.component';
 
 // markup
 const IndexPage = () => {
@@ -19,6 +21,8 @@ const IndexPage = () => {
         <Project />
         <Process />
         <Award />
+        <Testimonial />
+        <CTA />
       </Layout>
     </main>
   );

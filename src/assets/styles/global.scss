@@ -10,6 +10,15 @@
 
 @font-face {
   font-family: 'Open Sauce Sans';
+  src: url('../fonts/OpenSauceSans-Medium.woff2') format('woff2'),
+    url('../fonts/OpenSauceSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sauce Sans';
   src: url('../fonts/OpenSauceSans-Regular.woff2') format('woff2'),
     url('../fonts/OpenSauceSans-Regular.woff') format('woff');
   font-weight: normal;
@@ -47,6 +56,16 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+}
+
+.heading-2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #102226;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .heading-3 {
