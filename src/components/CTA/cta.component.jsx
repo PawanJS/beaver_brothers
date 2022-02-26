@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import * as Styled from './cta.styles';
 
-export const CTA = () => {
+export const Cta = () => {
   const data = useStaticQuery(graphql`
     query CTAQuery {
       markdownRemark(frontmatter: { category: { eq: "cta section" } }) {

@@ -8,7 +8,8 @@ import { Project } from '../components/Project/project.component';
 import { Process } from '../components/Process/process.component';
 import { Award } from '../components/Award/award.component';
 import { Testimonial } from '../components/Testimonial/testimonial.component';
-import { CTA } from '../components/CTA/cta.component';
+import { Cta } from '../components/CTA/cta.component';
+import { Blog } from '../components/Blog/blog.component';
 
 // markup
 const IndexPage = () => {
@@ -22,7 +23,8 @@ const IndexPage = () => {
         <Process />
         <Award />
         <Testimonial />
-        <CTA />
+        <Cta />
+        <Blog />
       </Layout>
     </main>
   );

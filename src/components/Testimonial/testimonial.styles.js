@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const TestimonialSlider = styled.section`
   padding: 100px 5%;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 `;
 
 export const TitleWrapper = styled.div`

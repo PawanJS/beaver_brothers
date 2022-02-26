@@ -1,6 +1,6 @@
 ---
 category: 'project section'
-Title: 'We create world-class development and branding'
+Title: 'Check out some great case studies'
 CTAText: 'Feature Project'
 Slug: '/'
 ---

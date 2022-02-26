@@ -29,6 +29,7 @@ export const Service = () => {
                 base
                 childImageSharp {
                   gatsbyImageData(
+                    quality: 100
                     width: 32
                     height: 32
                     placeholder: BLURRED
@@ -108,6 +109,7 @@ export const Service = () => {
           ))}
         </Styled.ServiceGrid>
         <StaticImage
+          className="d-none"
           style={Styled.Scribble}
           src="../../assets/images/global/squiggle.svg"
           alt="scribble Image"

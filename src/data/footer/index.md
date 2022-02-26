@@ -1,0 +1,4 @@
+---
+category: 'footer'
+Slug: '/'
+---

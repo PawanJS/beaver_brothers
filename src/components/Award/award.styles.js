@@ -30,11 +30,23 @@ export const AwardGrid = styled.div`
   grid-row-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+
+  @media screen and (max-width: 1200px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const AwardCard = styled.div`
   padding: 40px;
   border: 1px solid #dde3e4;
+
+  @media screen and (max-width: 1200px) {
+    padding: 20px;
+  }
 `;
 
 export const AwardLine = styled.div`

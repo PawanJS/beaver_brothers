@@ -6,6 +6,10 @@ export const Hero = styled.section`
   padding-right: 5%;
   padding-bottom: 60px;
   padding-left: 5%;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 160px;
+  }
 `;
 
 export const HeroGrid = styled.div`
@@ -15,6 +19,13 @@ export const HeroGrid = styled.div`
   grid-auto-columns: 1fr;
   grid-column-gap: 72px;
   grid-row-gap: 72px;
+
+  @media screen and (max-width: 990px) {
+    max-width: 560px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -22,6 +33,10 @@ export const HeroContent = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 0px;
+  }
 `;
 
 export const HeadingNormal = styled.div`
@@ -102,6 +117,10 @@ export const HeroDetails = styled.div`
   margin-top: 100px;
   color: #485b60;
   line-height: 24px;
+
+  @media screen and (max-width: 990px) {
+    margin-top: 60px;
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -178,6 +197,10 @@ export const HeroCTABlock = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   background-color: #1c3f3a;
+
+  @media only screen and (max-width: 990px) {
+    display: none;
+  }
 `;
 
 export const CTABg = {

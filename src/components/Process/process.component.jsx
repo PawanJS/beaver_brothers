@@ -34,6 +34,7 @@ export const Process = () => {
   return (
     <Styled.ProcessSection>
       <StaticImage
+        className="scribble-green"
         style={Styled.ScribbleGreen}
         src="../../assets/images/global/squiggle.svg"
         alt="Scribble Image"

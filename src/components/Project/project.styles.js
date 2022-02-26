@@ -4,6 +4,11 @@ import styled from 'styled-components';
 export const ProjectSection = styled.section`
   overflow: hidden;
   padding: 100px 3%;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -57,7 +62,7 @@ export const ProjectCTA = styled(Link)`
 
 export const ButtonArrow = {
   marginLeft: 10,
-  transition: 'transform 0.7s ease-in-out',
+  transition: 'transform 0.3s ease-in-out',
 };
 
 export const ProjectCollectionList = styled.div`
@@ -81,6 +86,10 @@ export const ProjectBase = styled(Link)`
 
   &:hover .project_img {
     transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 990px) {
+    height: 500px;
   }
 `;
 

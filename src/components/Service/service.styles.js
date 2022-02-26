@@ -4,6 +4,12 @@ import styled from 'styled-components';
 export const Service = styled.section`
   overflow: hidden;
   padding: 50px 3%;
+
+  @media screen and (max-width: 990px) {
+    .d-none {
+      display: none;
+    }
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -29,6 +35,10 @@ export const ServiceGrid = styled.div`
   grid-row-gap: 70px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 990px) {
+    grid-column-gap: 24px;
+  }
 `;
 
 export const ServiceCard = styled(Link)`

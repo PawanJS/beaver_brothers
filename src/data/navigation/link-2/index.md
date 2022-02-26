@@ -1,5 +1,5 @@
 ---
 category: 'navigation'
-Link: 'Company'
+Link: 'Works'
 Slug: '/'
 ---

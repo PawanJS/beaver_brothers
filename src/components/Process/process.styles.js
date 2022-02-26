@@ -4,6 +4,19 @@ export const ProcessSection = styled.section`
   position: relative;
   overflow: hidden;
   padding: 100px 3%;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .scribble-green {
+      left: auto !important;
+      top: 6% !important;
+      right: 11% !important;
+      bottom: auto !important;
+      max-width: 15% !important;
+    }
+  }
 `;
 
 export const ScribbleGreen = {

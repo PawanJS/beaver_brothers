@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CustomerSection = styled.section`
   display: flex;
-  padding: 100px 5%;
+  padding: 60px 5%;
   justify-content: center;
   align-items: center;
 `;
@@ -14,6 +14,10 @@ export const CustomerLogoGrid = styled.div`
   grid-row-gap: 40px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const CustomerLogo = {

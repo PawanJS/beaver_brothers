@@ -1,6 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+
+import { Menu } from './Menu-icon/menu.component';
+
 import * as Styled from './navbar.styles';
 
 export const Navbar = () => {
@@ -30,15 +33,12 @@ export const Navbar = () => {
           <Styled.BrandWrapper>
             <Styled.Brand to="/">
               <StaticImage
-                style={Styled.Logo}
-                src="../../../assets/images/navigation/logo.svg"
+                src="../../../assets/images/global/logo.svg"
                 alt="Netzila Logo"
                 placeholder="blurred"
-                layout="fixed"
-                width={40}
-                height={40}
+                layout="constrained"
+                width={200}
               />
-              <Styled.LogoText>Netzila</Styled.LogoText>
             </Styled.Brand>
             <Styled.NavigationLine />
             <Styled.Email href="https://www.pawanjs.netlify.app">
@@ -53,6 +53,7 @@ export const Navbar = () => {
             </Styled.NavLink>
           ))}
         </Styled.NavMenu>
+        <Menu />
       </Styled.NavContainer>
     </Styled.NavBar>
   );
