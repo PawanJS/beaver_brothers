@@ -10,7 +10,7 @@ export const PrimaryButton = ({ data }) => {
       <StaticImage
         className="button_arrow"
         style={Styled.ButtonArrow}
-        src="../../assets/images/global/arrow-white.svg"
+        src="../../../assets/images/global/arrow-white.svg"
         alt="Arrow"
         placeholder="blurred"
         layout="fixed"

@@ -12,7 +12,7 @@ export const TextButton = ({ data }) => {
       <StaticImage
         className="button_arrow_small"
         style={Styled.ButtonArrowSmall}
-        src="../../assets/images/global/arrow-green.svg"
+        src="../../../assets/images/global/arrow-green.svg"
         alt="Branding Image"
         placeholder="blurred"
         layout="fixed"

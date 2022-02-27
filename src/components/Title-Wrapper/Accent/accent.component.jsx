@@ -8,7 +8,7 @@ export const AccentWrapper = ({ data }) => {
     <Styled.AccentWrapper>
       <StaticImage
         style={Styled.AccentStar}
-        src="../../assets/images/global/star.svg"
+        src="../../../assets/images/global/star.svg"
         alt="Star Image"
         placeholder="blurred"
         layout="fixed"

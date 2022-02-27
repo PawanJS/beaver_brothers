@@ -8,7 +8,7 @@ export const TitleWrapperStandard = ({ data }) => {
     <Styled.TitleWrap>
       <StaticImage
         style={Styled.StarImg}
-        src="../../assets/images/global/star.svg"
+        src="../../../assets/images/global/star.svg"
         alt="Star Image"
         placeholder="blurred"
         layout="fixed"

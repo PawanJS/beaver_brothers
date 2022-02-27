@@ -10,7 +10,7 @@ export const ArrowOutlineButton = ({ data }) => {
       <StaticImage
         className="button_arrow"
         style={Styled.ButtonArrow}
-        src="../../assets/images/global/arrow-green.svg"
+        src="../../../../assets/images/global/arrow-green.svg"
         alt="Branding Image"
         placeholder="blurred"
         layout="fixed"
