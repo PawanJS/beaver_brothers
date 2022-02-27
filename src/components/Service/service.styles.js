@@ -39,6 +39,11 @@ export const ServiceGrid = styled.div`
   @media screen and (max-width: 990px) {
     grid-column-gap: 24px;
   }
+
+  @media screen and (max-width: 767px) {
+    grid-row-gap: 24px;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ServiceCard = styled(Link)`
@@ -76,6 +81,10 @@ export const ServiceCard = styled(Link)`
       filter: invert(100%);
     }
   }
+
+  @media screen and (max-width: 479px) {
+    padding: 15px;
+  }
 `;
 
 export const FeatureIcon = {
@@ -109,35 +118,6 @@ export const ServiceStar = {
   transformStyle: 'preserve-3d',
   opacity: '0',
   transition: 'all 0.3s ease-in-out',
-};
-
-export const ButtonText = styled.div`
-  margin-top: 32px;
-  display: flex;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  align-items: center;
-  color: #102226;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-
-  &:hover {
-    .button_arrow_small {
-      transform: translateX(4px);
-    }
-  }
-`;
-
-export const ButtonTextRemove = styled.div`
-  color: rgb(16, 34, 38);
-  transition: color 0.3s ease-in-out;
-`;
-
-export const ButtonArrowSmall = {
-  marginLeft: 4,
-  transition: 'transform 0.3s ease-in-out',
 };
 
 export const Scribble = {

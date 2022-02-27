@@ -1,6 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+
+import { TextButton } from '../Buttons/Text-Button/text-button.component';
+
 import * as Styled from './award.styles';
 
 export const Award = () => {
@@ -51,7 +54,10 @@ export const Award = () => {
         </Styled.TitleWrapper>
         <Styled.AwardGrid>
           {data.allMarkdownRemark.edges.map((award) => (
-            <Styled.AwardCard key={award.node.id}>
+            <Styled.AwardCard
+              key={award.node.id}
+              to={award.node.frontmatter.Slug}
+            >
               <StaticImage
                 src="../../assets/images/award/award.svg"
                 alt="Award Image"
@@ -68,19 +74,7 @@ export const Award = () => {
                 {award.node.frontmatter.Title}
               </Styled.AwardTitle>
               <Styled.AwardLine />
-              <Styled.AwardCTA to={award.node.frontmatter.Slug}>
-                {award.node.frontmatter.CTAText}
-                <StaticImage
-                  className="button_arrow"
-                  style={Styled.AwardArrow}
-                  src="../../assets/images/global/arrow-green.svg"
-                  alt="Arrow Image"
-                  placeholder="blurred"
-                  layout="fixed"
-                  width={24}
-                  height={24}
-                />
-              </Styled.AwardCTA>
+              <TextButton data={award} />
             </Styled.AwardCard>
           ))}
         </Styled.AwardGrid>

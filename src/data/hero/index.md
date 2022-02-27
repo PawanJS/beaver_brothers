@@ -11,6 +11,4 @@ HeroBannerText: 'Start growing with'
 HeroBannerBrand: 'Netzila'
 HeroBannerCTAText: 'Learn More'
 HeroBannerCTALink: '/'
-UiCardHeading: '+480'
-UiCardText: 'Happy Customer'
 ---

@@ -41,6 +41,10 @@ export const SlideGrid = styled.div`
   grid-column-gap: 92px;
   grid-row-gap: 42px;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const TestimonialImageWrapper = styled.div`

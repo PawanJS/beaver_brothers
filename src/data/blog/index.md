@@ -1,6 +1,6 @@
 ---
 category: 'blog section'
 Title: 'Blog & Articles'
-BlogCTA: 'Latest Article'
+CTAText: 'Latest Article'
 Slug: '/'
 ---

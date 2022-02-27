@@ -2,8 +2,10 @@ import React from 'react';
 import Slider from 'react-slick';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
-import * as Styled from './testimonial.styles';
 
+import { TitleWrapperStandard } from '../Title-Wrapper/Standard/standard.component';
+
+import * as Styled from './testimonial.styles';
 import './slick.scss';
 
 export const Testimonial = () => {
@@ -60,18 +62,7 @@ export const Testimonial = () => {
   return (
     <Styled.TestimonialSlider>
       <div className="container">
-        <Styled.TitleWrapper>
-          <StaticImage
-            style={Styled.TestimonialStar}
-            src="../../assets/images/global/star.svg"
-            alt="Star Image"
-            placeholder="blurred"
-            layout="fixed"
-            width={124}
-            height={124}
-          />
-          <h3 className="heading-3">{Testimonial.Title}</h3>
-        </Styled.TitleWrapper>
+        <TitleWrapperStandard data={Testimonial} />
         <Styled.SlideContainer>
           <Slider {...settings}>
             {data.allMarkdownRemark.edges.map((testimonial) => (

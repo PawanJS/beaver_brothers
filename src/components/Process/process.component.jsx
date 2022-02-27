@@ -1,6 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+
+import { TitleWrapperStandard } from '../Title-Wrapper/Standard/standard.component';
+
 import * as Styled from './process.styles';
 
 export const Process = () => {
@@ -39,36 +42,24 @@ export const Process = () => {
         src="../../assets/images/global/squiggle.svg"
         alt="Scribble Image"
         placeholder="blurred"
-        layout="fixed"
+        layout="constrained"
         width={142}
-        height={142}
       />
       <div className="container-extra-small">
-        <Styled.TitleWrap>
-          <StaticImage
-            style={Styled.StarImg}
-            src="../../assets/images/global/star.svg"
-            alt="Star Image"
-            placeholder="blurred"
-            layout="fixed"
-            width={124}
-            height={124}
-          />
-          <h4 className="heading-4">{Process.Title}</h4>
-          <div>
-            {data.allMarkdownRemark.edges.map((process) => (
-              <div key={process.node.id}>
-                <Styled.ProcessLine />
-                <div>
-                  <Styled.Title>{process.node.frontmatter.Title}</Styled.Title>
-                  <Styled.Details>
-                    {process.node.frontmatter.Paragraph}
-                  </Styled.Details>
-                </div>
+        <TitleWrapperStandard data={Process} />
+        <div>
+          {data.allMarkdownRemark.edges.map((process) => (
+            <div key={process.node.id}>
+              <Styled.ProcessLine />
+              <div>
+                <Styled.Title>{process.node.frontmatter.Title}</Styled.Title>
+                <Styled.Details>
+                  {process.node.frontmatter.Paragraph}
+                </Styled.Details>
               </div>
-            ))}
-          </div>
-        </Styled.TitleWrap>
+            </div>
+          ))}
+        </div>
       </div>
     </Styled.ProcessSection>
   );

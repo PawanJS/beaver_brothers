@@ -9,6 +9,11 @@ export const FooterLinkWrapper = styled.div`
 export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const FooterBrand = styled(Link)`
@@ -16,6 +21,10 @@ export const FooterBrand = styled(Link)`
   align-items: center;
   text-decoration: none;
   color: #333333;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 `;
 
 export const Logo = { marginRight: '12px' };

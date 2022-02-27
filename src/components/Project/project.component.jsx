@@ -1,7 +1,11 @@
 import React from 'react';
-import * as Styled from './project.styles';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+
+import { TextButton } from '../Buttons/Text-Button/text-button.component';
+import { ArrowOutlineButton } from '../Buttons/Outline-Button/Arrow-Button/arrow-button.component';
+
+import * as Styled from './project.styles';
 
 export const Project = () => {
   const data = useStaticQuery(graphql`
@@ -62,19 +66,7 @@ export const Project = () => {
             />
             <h3 className="heading-3">{Project.Title}</h3>
           </Styled.TitleWrapperProject>
-          <Styled.ProjectCTA to={Project.Slug}>
-            {Project.CTAText}
-            <StaticImage
-              className="button_arrow"
-              style={Styled.ButtonArrow}
-              src="../../assets/images/global/arrow-green.svg"
-              alt="Branding Image"
-              placeholder="blurred"
-              layout="fixed"
-              width={24}
-              height={24}
-            />
-          </Styled.ProjectCTA>
+          <ArrowOutlineButton data={Project} />
         </Styled.TitleWrapper>
         <Styled.ProjectCollectionList>
           {data.allMarkdownRemark.edges.map((project) => (
@@ -107,19 +99,7 @@ export const Project = () => {
                     <Styled.ProjectDetails>
                       {project.node.frontmatter.Paragraph}
                     </Styled.ProjectDetails>
-                    <Styled.ProjectCoverCTA>
-                      {project.node.frontmatter.CTAText}
-                      <StaticImage
-                        className="button_arrow_small"
-                        style={Styled.ButtonArrowSmall}
-                        src="../../assets/images/global/arrow-cream.svg"
-                        alt="Arrow Image"
-                        placeholder="blurred"
-                        layout="fixed"
-                        width={24}
-                        height={24}
-                      />
-                    </Styled.ProjectCoverCTA>
+                    <TextButton data={project} />
                   </div>
                 </Styled.ProjectCover>
               </Styled.ProjectBase>

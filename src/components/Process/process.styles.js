@@ -28,21 +28,6 @@ export const ScribbleGreen = {
   maxWidth: '10%',
 };
 
-export const TitleWrap = styled.div`
-  position: relative;
-  max-width: 510px;
-  margin-bottom: 32px;
-`;
-
-export const StarImg = {
-  position: 'absolute',
-  left: '-50px',
-  top: '-35px',
-  right: 'auto',
-  bottom: 'auto',
-  zIndex: '-1',
-};
-
 export const ProcessLine = styled.div`
   width: 100%;
   height: 1px;

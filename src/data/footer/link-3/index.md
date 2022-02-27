@@ -1,5 +1,5 @@
 ---
 category: 'footer link'
 Link: 'Company'
-Slug: '/'
+Slug: '/company'
 ---

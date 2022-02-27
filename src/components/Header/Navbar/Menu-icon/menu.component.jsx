@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 import './menu.styles.scss';
 
-export const Menu = () => {
+export const Menu = ({ onClick }) => {
   const [isActive, setActive] = useState(false);
 
   const toggleClass = () => {
     setActive(!isActive);
+    onClick();
   };
 
   return (

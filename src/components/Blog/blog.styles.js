@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 export const BlogSection = styled.section`
   padding: 140px 5%;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -14,11 +19,20 @@ export const TitleWrapper = styled.div`
   margin-left: auto;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const TitleWrapBlog = styled.div`
   position: relative;
   max-width: 510px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const StarBlog = {
@@ -30,34 +44,6 @@ export const StarBlog = {
   zIndex: '-1',
 };
 
-export const BlogCTA = styled(Link)`
-  display: flex;
-  min-height: 40px;
-  padding: 8px 8px 8px 24px;
-  align-items: center;
-  border: 1px solid #1c3f3a;
-  transition: border-color 400ms ease, background-color 400ms ease;
-  font-family: Inter, sans-serif;
-  color: #1c3f3a;
-  line-height: 24px;
-  font-weight: 500;
-  text-decoration: none;
-
-  &:hover {
-    border-color: rgba(28, 63, 58, 0);
-    background-color: #e0eae8;
-
-    .button_arrow {
-      transform: translate(4px);
-    }
-  }
-`;
-
-export const ButtonArrow = {
-  marginLeft: '10px',
-  transition: 'transform 0.3s ease-in-out',
-};
-
 export const BlogCollection = styled.div`
   display: grid;
   grid-auto-columns: 1fr;
@@ -65,6 +51,14 @@ export const BlogCollection = styled.div`
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const BlogCard = styled(Link)`
@@ -81,6 +75,10 @@ export const BlogCard = styled(Link)`
     .blog_image {
       transform: scale(1.08);
     }
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 15px;
   }
 `;
 
@@ -121,26 +119,3 @@ export const BlogTitle = styled.div`
   font-weight: 700;
   letter-spacing: -0.03em;
 `;
-
-export const BlogCardCTA = styled.div`
-  display: flex;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  align-items: center;
-  color: #102226;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-
-  &:hover {
-    .button_arrow {
-      transform: translate(4px);
-    }
-  }
-`;
-
-export const ButtonArrowSmall = {
-  marginLeft: '4px',
-  transition: 'transform 0.3s ease-in-out',
-};

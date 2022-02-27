@@ -2,6 +2,9 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 
+import { TextButton } from '../Buttons/Text-Button/text-button.component';
+import { ArrowOutlineButton } from '../Buttons/Outline-Button/Arrow-Button/arrow-button.component';
+
 import * as Styled from './blog.styles';
 
 export const Blog = () => {
@@ -12,7 +15,7 @@ export const Blog = () => {
         frontmatter {
           Title
           Slug
-          BlogCTA
+          CTAText
         }
       }
       allMarkdownRemark(filter: { frontmatter: { category: { eq: "blog" } } }) {
@@ -60,19 +63,7 @@ export const Blog = () => {
             />
             <h3 className="heading-3">{Blog.Title}</h3>
           </Styled.TitleWrapBlog>
-          <Styled.BlogCTA to="Blog.Slug">
-            {Blog.BlogCTA}
-            <StaticImage
-              className="button_arrow"
-              style={Styled.ButtonArrow}
-              src="../../assets/images/global/arrow-green.svg"
-              alt="Branding Image"
-              placeholder="blurred"
-              layout="fixed"
-              width={24}
-              height={24}
-            />
-          </Styled.BlogCTA>
+          <ArrowOutlineButton data={Blog} />
         </Styled.TitleWrapper>
         <Styled.BlogCollection>
           {data.allMarkdownRemark.edges.map((blog) => (
@@ -94,7 +85,7 @@ export const Blog = () => {
                   <Styled.BlogTitle>
                     {blog.node.frontmatter.Title}
                   </Styled.BlogTitle>
-                  <Styled.BlogCardCTA>
+                  {/* <Styled.BlogCardCTA>
                     {blog.node.frontmatter.CTAText}
                     <StaticImage
                       className="button_arrow"
@@ -106,7 +97,8 @@ export const Blog = () => {
                       width={24}
                       height={24}
                     />
-                  </Styled.BlogCardCTA>
+                  </Styled.BlogCardCTA> */}
+                  <TextButton data={blog} />
                 </Styled.BlogContentWrapper>
               </Styled.BlogCard>
             </div>

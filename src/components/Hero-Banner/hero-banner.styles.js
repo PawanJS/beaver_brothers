@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 export const Hero = styled.section`
   overflow: hidden;
@@ -72,6 +72,11 @@ export const HeroTitle = styled.h1`
   line-height: 80px;
   font-weight: 700;
   letter-spacing: -0.04em;
+
+  @media screen and (max-width: 479px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 `;
 
 export const HeroParagraph = styled.p`
@@ -80,38 +85,6 @@ export const HeroParagraph = styled.p`
   line-height: 32px;
   letter-spacing: -0.03em;
 `;
-
-export const ButtonPrimary = styled(Link)`
-  margin-top: 32px;
-  display: flex;
-  min-height: 48px;
-  padding: 12px 10px 12px 32px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #eff1f5;
-  background-color: #26534c;
-  transition: background-color 300ms ease;
-  font-family: Inter, sans-serif;
-  color: #fff;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-
-  &:hover {
-    background-color: #1c3f3a;
-
-    .button_arrow {
-      transform: translateX(4px);
-    }
-  }
-`;
-
-export const ButtonArrow = {
-  marginLeft: 20,
-  transition: 'transform 0.3s ease-in-out',
-};
 
 export const HeroDetails = styled.div`
   margin-top: 100px;
@@ -136,51 +109,6 @@ export const HeroPerson = {
   position: 'relative',
   zIndex: 2,
 };
-
-export const HeroCard = styled.div`
-  position: absolute;
-  left: -76px;
-  top: auto;
-  right: auto;
-  bottom: 56px;
-  z-index: 5;
-  display: flex;
-  padding: 28px 32px;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 51px 51px 72px -12px rgba(117, 114, 104, 0.16);
-  animation: bounce 1.3s infinite alternate;
-
-  @keyframes bounce {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-18px);
-    }
-  }
-`;
-
-export const HeroCardStar = {
-  marginRight: 24,
-};
-
-export const UiCardHeading = styled.h5`
-  color: #102226;
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-`;
-
-export const UiCardText = styled.p`
-  font-family: Inter, sans-serif;
-  color: #485b60;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-`;
 
 export const HeroCTABlock = styled.div`
   position: absolute;

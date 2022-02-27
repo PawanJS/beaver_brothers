@@ -38,11 +38,16 @@ export const AwardGrid = styled.div`
   @media screen and (max-width: 990px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media screen and (max-width: 525px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-export const AwardCard = styled.div`
+export const AwardCard = styled(Link)`
   padding: 40px;
   border: 1px solid #dde3e4;
+  text-decoration: none;
 
   @media screen and (max-width: 1200px) {
     padding: 20px;
@@ -72,25 +77,3 @@ export const AwardTitle = styled.div`
   font-weight: 700;
   letter-spacing: -0.03em;
 `;
-
-export const AwardCTA = styled(Link)`
-  display: flex;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  align-items: center;
-  color: #102226;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  font-size: 14px;
-
-  &:hover .button_arrow {
-    transform: translateX(4px);
-  }
-`;
-
-export const AwardArrow = {
-  marginLeft: '4px',
-  transition: 'transform 0.3s ease-in-out',
-};

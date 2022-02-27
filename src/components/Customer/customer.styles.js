@@ -5,6 +5,11 @@ export const CustomerSection = styled.section`
   padding: 60px 5%;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 479px) {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
 `;
 
 export const CustomerLogoGrid = styled.div`
@@ -17,6 +22,11 @@ export const CustomerLogoGrid = styled.div`
 
   @media screen and (max-width: 990px) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 479px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 `;
 

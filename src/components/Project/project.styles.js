@@ -20,11 +20,20 @@ export const TitleWrapper = styled.div`
   margin-left: auto;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const TitleWrapperProject = styled.div`
   position: relative;
   max-width: 510px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const StarStd = {
@@ -36,35 +45,6 @@ export const StarStd = {
   zIndex: '-1',
 };
 
-export const ProjectCTA = styled(Link)`
-  display: -webkit-box;
-  display: flex;
-  min-height: 40px;
-  padding: 8px 8px 8px 24px;
-  align-items: center;
-  border: 1px solid #1c3f3a;
-  transition: border-color 400ms ease, background-color 400ms ease;
-  font-family: Inter, sans-serif;
-  color: #1c3f3a;
-  line-height: 24px;
-  font-weight: 500;
-  text-decoration: none;
-
-  &:hover {
-    border-color: rgba(28, 63, 58, 0);
-    background-color: #e0eae8;
-
-    .button_arrow {
-      transform: translate(4px);
-    }
-  }
-`;
-
-export const ButtonArrow = {
-  marginLeft: 10,
-  transition: 'transform 0.3s ease-in-out',
-};
-
 export const ProjectCollectionList = styled.div`
   display: grid;
   grid-auto-columns: 1fr;
@@ -72,6 +52,10 @@ export const ProjectCollectionList = styled.div`
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ListItem = styled.div``;
@@ -126,6 +110,14 @@ export const ProjectCover = styled.div`
     .project_details {
       opacity: 1;
     }
+
+    .button_text_remove {
+      color: rgb(236, 232, 217);
+    }
+
+    .button_arrow_small {
+      filter: invert(100%);
+    }
   }
 `;
 
@@ -144,27 +136,3 @@ export const Heading = styled.h5`
 export const ProjectDetails = styled.p`
   color: #b4bbbd;
 `;
-
-export const ProjectCoverCTA = styled.div`
-  display: flex;
-  margin-top: 24px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  align-items: center;
-  color: #ece8d9;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-
-  &:hover {
-    .button_arrow_small {
-      transform: translate(4px);
-    }
-  }
-`;
-
-export const ButtonArrowSmall = {
-  marginLeft: '4px',
-  transition: 'transform 0.3s ease-in-out',
-};

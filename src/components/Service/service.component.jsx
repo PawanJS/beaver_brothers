@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 
+import { TextButton } from '../Buttons/Text-Button/text-button.component';
+
 import * as Styled from './service.styles';
 
 export const Service = () => {
@@ -90,21 +92,7 @@ export const Service = () => {
                 width={138}
                 height={128}
               />
-              <Styled.ButtonText>
-                <Styled.ButtonTextRemove className="button_text_remove">
-                  {service.node.frontmatter.CTAText}
-                </Styled.ButtonTextRemove>
-                <StaticImage
-                  className="button_arrow_small"
-                  style={Styled.ButtonArrowSmall}
-                  src="../../assets/images/global/arrow-green.svg"
-                  alt="Branding Image"
-                  placeholder="blurred"
-                  layout="fixed"
-                  width={24}
-                  height={24}
-                />
-              </Styled.ButtonText>
+              <TextButton data={service} />
             </Styled.ServiceCard>
           ))}
         </Styled.ServiceGrid>

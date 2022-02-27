@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -26,6 +26,16 @@ export const Navbar = () => {
     }
   `);
 
+  const [isActive, setActive] = useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+
+    isActive
+      ? document.body.classList.remove('overflow-hidden')
+      : document.body.classList.add('overflow-hidden');
+  };
+
   return (
     <Styled.NavBar>
       <Styled.NavContainer>
@@ -46,14 +56,14 @@ export const Navbar = () => {
             </Styled.Email>
           </Styled.BrandWrapper>
         </div>
-        <Styled.NavMenu>
+        <Styled.NavMenu className={isActive ? 'active' : null}>
           {data.allMarkdownRemark.edges.map((link) => (
             <Styled.NavLink to={link.node.frontmatter.Slug} key={link.node.id}>
               {link.node.frontmatter.Link}
             </Styled.NavLink>
           ))}
         </Styled.NavMenu>
-        <Menu />
+        <Menu onClick={toggleClass} />
       </Styled.NavContainer>
     </Styled.NavBar>
   );

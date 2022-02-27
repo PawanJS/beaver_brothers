@@ -9,6 +9,7 @@ export const CTABg = {
   position: 'absolute',
   top: '0',
   right: '0',
+  zIndex: 0,
 };
 
 export const CTABlock = styled.div`
@@ -17,6 +18,14 @@ export const CTABlock = styled.div`
   padding: 100px;
   align-items: center;
   background-color: #1c3f3a;
+
+  @media screen and (max-width: 990px) {
+    padding-left: 40px;
+  }
+
+  @media screen and (max-width: 990px) {
+    padding: 100px 15px 50px;
+  }
 `;
 
 export const CTAGrid = styled.div`
@@ -28,6 +37,15 @@ export const CTAGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 16px;
   grid-column-gap: 16px;
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 479px) {
+    position: relative;
+    z-index: 9;
+  }
 `;
 
 export const Heading = styled.h2`

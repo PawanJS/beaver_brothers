@@ -54,6 +54,10 @@ export const Email = styled.a`
   font-weight: 400;
   text-decoration: none;
   font-family: 'Open Sauce Sans', sans-serif;
+
+  @media only screen and (max-width: 525px) {
+    display: none;
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -61,6 +65,7 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   white-space: nowrap;
+  transition: all 0.5s ease-in-out;
 
   @media only screen and (max-width: 1200px) {
     margin-right: 12%;
@@ -73,11 +78,14 @@ export const NavMenu = styled.div`
     top: 104px;
     left: 0;
     right: 0;
-    background: #1c3f3a;
-    padding: 20px;
-    align-items: flex-start;
+    background: #fff;
+    height: 100vh;
+    padding: 40px 20px;
+    transform: translateX(calc(-100%));
 
-    display: none;
+    &.active {
+      transform: translate(0);
+    }
   }
 `;
 
@@ -99,9 +107,5 @@ export const NavLink = styled(Link)`
 
   &:hover {
     border: 1px solid #1c3f3a;
-  }
-
-  @media only screen and (max-width: 990px) {
-    color: #fff;
   }
 `;

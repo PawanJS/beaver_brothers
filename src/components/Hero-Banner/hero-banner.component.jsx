@@ -3,6 +3,8 @@ import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import * as Styled from './hero-banner.styles';
+import { HeroCard } from '../Hero-Card/hero-card.component';
+import { PrimaryButton } from '../Buttons/Primary-Button/primary.component';
 
 export const HeroBanner = () => {
   const data = useStaticQuery(graphql`
@@ -16,8 +18,6 @@ export const HeroBanner = () => {
           HeroBannerCTALink
           HeroBannerCTAText
           HeroBannerText
-          UiCardHeading
-          UiCardText
           Subtitle
           TagLine
           Title
@@ -54,19 +54,7 @@ export const HeroBanner = () => {
               <Styled.HeroTitle>{Hero.Title}</Styled.HeroTitle>
             </Styled.HeroTitleWrapper>
             <Styled.HeroParagraph>{Hero.Subtitle}</Styled.HeroParagraph>
-            <Styled.ButtonPrimary to={Hero.Slug}>
-              {Hero.CTAText}
-              <StaticImage
-                className="button_arrow"
-                style={Styled.ButtonArrow}
-                src="../../assets/images/global/arrow-white.svg"
-                alt="Arrow"
-                placeholder="blurred"
-                layout="fixed"
-                width={24}
-                height={24}
-              />
-            </Styled.ButtonPrimary>
+            <PrimaryButton data={Hero} />
             <Styled.HeroDetails>{Hero.TagLine}</Styled.HeroDetails>
           </Styled.HeroContent>
           <Styled.HeroImage>
@@ -75,23 +63,7 @@ export const HeroBanner = () => {
               image={Hero.Cover.childImageSharp.gatsbyImageData}
               alt={Hero.Cover.base}
             />
-            <Styled.HeroCard>
-              <StaticImage
-                style={Styled.HeroCardStar}
-                src="../../assets/images/hero/card-star.svg"
-                alt="Star Image"
-                placeholder="blurred"
-                layout="fixed"
-                width={56}
-                height={56}
-              />
-              <div>
-                <Styled.UiCardHeading>
-                  {Hero.UiCardHeading}
-                </Styled.UiCardHeading>
-                <Styled.UiCardText>{Hero.UiCardText}</Styled.UiCardText>
-              </div>
-            </Styled.HeroCard>
+            <HeroCard />
             <Styled.HeroCTABlock>
               <StaticImage
                 style={Styled.CTABg}
