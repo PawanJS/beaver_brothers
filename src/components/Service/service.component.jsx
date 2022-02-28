@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import { TextButton } from '../Buttons/Text-Button/text-button.component';
+import { ServiceCard } from '../Service-Card/service-card.component';
 
 import * as Styled from './service.styles';
 
@@ -65,35 +65,7 @@ export const Service = () => {
         </Styled.TitleWrapper>
         <Styled.ServiceGrid>
           {data.allMarkdownRemark.edges.map((service) => (
-            <Styled.ServiceCard
-              to={service.node.frontmatter.Slug}
-              key={service.node.id}
-            >
-              <GatsbyImage
-                image={
-                  service.node.frontmatter.Icon.childImageSharp.gatsbyImageData
-                }
-                style={Styled.FeatureIcon}
-                alt={service.node.frontmatter.Icon.base}
-              />
-              <Styled.CardTitle className="heading-3">
-                {service.node.frontmatter.Title}
-              </Styled.CardTitle>
-              <Styled.ServiceParagraph className="paragraph">
-                {service.node.frontmatter.Paragraph}
-              </Styled.ServiceParagraph>
-              <StaticImage
-                className="service-star"
-                style={Styled.ServiceStar}
-                src="../../assets/images/service/card-bg.svg"
-                alt="Branding Image"
-                placeholder="blurred"
-                layout="fixed"
-                width={138}
-                height={128}
-              />
-              <TextButton data={service} />
-            </Styled.ServiceCard>
+            <ServiceCard data={service} key={service.node.id} />
           ))}
         </Styled.ServiceGrid>
         <StaticImage

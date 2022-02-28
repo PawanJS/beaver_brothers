@@ -75,6 +75,11 @@ export const CompanyGrid = styled.div`
     min-height: 400px;
     background-color: #e0eae8;
   }
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CompanyImageGrid = styled.div`

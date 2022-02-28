@@ -27,7 +27,6 @@ export const Navbar = () => {
   `);
 
   const [isActive, setActive] = useState(false);
-
   const toggleClass = () => {
     setActive(!isActive);
 
@@ -56,12 +55,27 @@ export const Navbar = () => {
             </Styled.Email>
           </Styled.BrandWrapper>
         </div>
-        <Styled.NavMenu className={isActive ? 'active' : null}>
+        <Styled.NavMenu
+          className={`${isActive ? 'active' : ''} ${
+            window.location.pathname != '/' ? 'margin-right-zero' : ''
+          }`}
+        >
           {data.allMarkdownRemark.edges.map((link) => (
-            <Styled.NavLink to={link.node.frontmatter.Slug} key={link.node.id}>
+            <Styled.NavLink
+              to={link.node.frontmatter.Slug}
+              key={link.node.id}
+              onClick={toggleClass}
+            >
               {link.node.frontmatter.Link}
             </Styled.NavLink>
           ))}
+          <Styled.NavigationButton
+            className={window.location.pathname != '/' ? 'active' : ''}
+            to="/"
+            onClick={toggleClass}
+          >
+            Contact
+          </Styled.NavigationButton>
         </Styled.NavMenu>
         <Menu onClick={toggleClass} />
       </Styled.NavContainer>

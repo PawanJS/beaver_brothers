@@ -12,6 +12,10 @@ export const TeamGrid = styled.div`
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const TeamWrapper = styled(Link)`

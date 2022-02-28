@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const Values = styled.section`
   padding: 50px 5% 100px;
+
+  @media screen and (max-width: 990px) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 `;
 
 export const ValuesGrid = styled.div`
@@ -13,6 +18,10 @@ export const ValuesGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+
+  @media screen and (max-width: 990px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ValueCard = styled.div`

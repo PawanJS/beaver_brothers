@@ -67,8 +67,16 @@ export const NavMenu = styled.div`
   white-space: nowrap;
   transition: all 0.5s ease-in-out;
 
+  &.margin-right-zero {
+    margin-right: 0;
+  }
+
   @media only screen and (max-width: 1200px) {
     margin-right: 12%;
+
+    &.margin-right-zero {
+      margin-right: 0;
+    }
   }
 
   @media only screen and (max-width: 990px) {
@@ -107,5 +115,32 @@ export const NavLink = styled(Link)`
 
   &:hover {
     border: 1px solid #1c3f3a;
+  }
+`;
+
+export const NavigationButton = styled(Link)`
+  min-height: 48px;
+  margin-left: 8px;
+  padding: 12px 24px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eff1f5;
+  background-color: #26534c;
+  transition: all 300ms ease;
+  font-family: Inter, sans-serif;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &:hover {
+    background-color: #f7f8fa;
+    color: #1c3f3a;
   }
 `;
