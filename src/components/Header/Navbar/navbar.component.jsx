@@ -57,7 +57,9 @@ export const Navbar = () => {
         </div>
         <Styled.NavMenu
           className={`${isActive ? 'active' : ''} ${
-            window.location.pathname != '/' ? 'margin-right-zero' : ''
+            typeof window !== 'undefined' && window.location.pathname != '/'
+              ? 'margin-right-zero'
+              : ''
           }`}
         >
           {data.allMarkdownRemark.edges.map((link) => (
@@ -70,7 +72,11 @@ export const Navbar = () => {
             </Styled.NavLink>
           ))}
           <Styled.NavigationButton
-            className={window.location.pathname != '/' ? 'active' : ''}
+            className={
+              typeof window !== 'undefined' && window.location.pathname != '/'
+                ? 'active'
+                : ''
+            }
             to="/"
             onClick={toggleClass}
           >
