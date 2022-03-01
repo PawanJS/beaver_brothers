@@ -8,14 +8,12 @@ import * as Styled from './project-card.styles';
 export const ProjectCard = ({ data }) => {
   return (
     <Styled.ProjectCard>
-      <Styled.ProjectBase to={data.node.frontmatter.Slug}>
+      <Styled.ProjectBase to={data.Slug}>
         <GatsbyImage
           className="project_img"
-          image={
-            data.node.frontmatter.ProjectImage.childImageSharp.gatsbyImageData
-          }
+          image={data.ProjectImage.childImageSharp.gatsbyImageData}
           style={Styled.ImageCover}
-          alt={data.node.frontmatter.ProjectImage.base}
+          alt={data.ProjectImage.base}
         />
         <Styled.ProjectCover>
           <StaticImage
@@ -29,10 +27,8 @@ export const ProjectCard = ({ data }) => {
             height={48}
           />
           <div className="project_details">
-            <Styled.Heading>{data.node.frontmatter.Title}</Styled.Heading>
-            <Styled.ProjectDetails>
-              {data.node.frontmatter.Paragraph}
-            </Styled.ProjectDetails>
+            <Styled.Heading>{data.Title}</Styled.Heading>
+            <Styled.ProjectDetails>{data.Paragraph}</Styled.ProjectDetails>
             <TextButton data={data} />
           </div>
         </Styled.ProjectCover>

@@ -57,7 +57,7 @@ export const Navbar = () => {
         </div>
         <Styled.NavMenu
           className={`${isActive ? 'active' : ''} ${
-            typeof window !== 'undefined' && window.location.pathname != '/'
+            typeof window !== 'undefined' && window.location.pathname !== '/'
               ? 'margin-right-zero'
               : ''
           }`}
@@ -73,11 +73,11 @@ export const Navbar = () => {
           ))}
           <Styled.NavigationButton
             className={
-              typeof window !== 'undefined' && window.location.pathname != '/'
+              typeof window !== 'undefined' && window.location.pathname !== '/'
                 ? 'active'
                 : ''
             }
-            to="/"
+            to="/contact"
             onClick={toggleClass}
           >
             Contact

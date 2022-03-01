@@ -5,9 +5,9 @@ import * as Styled from './text-button.styles';
 
 export const TextButton = ({ data }) => {
   return (
-    <Styled.ButtonText>
+    <Styled.ButtonText className="text-button">
       <Styled.ButtonTextRemove className="button_text_remove">
-        {data.node.frontmatter.CTAText}
+        {data.CTAText}
       </Styled.ButtonTextRemove>
       <StaticImage
         className="button_arrow_small"

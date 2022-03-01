@@ -7,17 +7,15 @@ import * as Styled from './service-card-styles';
 
 export const ServiceCard = ({ data }) => {
   return (
-    <Styled.ServiceCard to={data.node.frontmatter.Slug}>
+    <Styled.ServiceCard to={data.Slug}>
       <GatsbyImage
-        image={data.node.frontmatter.Icon.childImageSharp.gatsbyImageData}
+        image={data.Icon.childImageSharp.gatsbyImageData}
         style={Styled.FeatureIcon}
-        alt={data.node.frontmatter.Icon.base}
+        alt={data.Icon.base}
       />
-      <Styled.CardTitle className="heading-3">
-        {data.node.frontmatter.Title}
-      </Styled.CardTitle>
+      <Styled.CardTitle className="heading-3">{data.Title}</Styled.CardTitle>
       <Styled.ServiceParagraph className="paragraph">
-        {data.node.frontmatter.Paragraph}
+        {data.Paragraph}
       </Styled.ServiceParagraph>
       <StaticImage
         className="service-star"

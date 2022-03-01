@@ -49,7 +49,9 @@ export const ContentImage = () => {
               <Styled.BodyLarge>{Content.Paragraph_2}</Styled.BodyLarge>
               <Styled.BodyLarge>{Content.Paragraph_3}</Styled.BodyLarge>
             </div>
-            <ArrowOutlineButton className="content_cta" data={Content} />
+            <div className="content_cta">
+              <ArrowOutlineButton data={Content} />
+            </div>
           </Styled.CompanyContentWrapper>
         </Styled.CompanyGrid>
       </div>

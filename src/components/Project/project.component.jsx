@@ -70,7 +70,10 @@ export const Project = () => {
         </Styled.TitleWrapper>
         <Styled.ProjectCollectionList>
           {data.allMarkdownRemark.edges.map((project) => (
-            <ProjectCard data={project} key={project.node.id} />
+            <ProjectCard
+              data={project.node.frontmatter}
+              key={project.node.id}
+            />
           ))}
         </Styled.ProjectCollectionList>
       </div>

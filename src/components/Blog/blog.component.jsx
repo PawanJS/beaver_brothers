@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import { TextButton } from '../Buttons/Text-Button/text-button.component';
 import { ArrowOutlineButton } from '../Buttons/Outline-Button/Arrow-Button/arrow-button.component';
+import { BlogCard } from '../Blog-Card/blog-card.component';
 
 import * as Styled from './blog.styles';
 
@@ -67,41 +67,7 @@ export const Blog = () => {
         </Styled.TitleWrapper>
         <Styled.BlogCollection>
           {data.allMarkdownRemark.edges.map((blog) => (
-            <div key={blog.node.id}>
-              <Styled.BlogCard to={blog.node.frontmatter.Slug}>
-                <Styled.BlogThumbnailWrapper>
-                  <GatsbyImage
-                    className="blog_image"
-                    image={
-                      blog.node.frontmatter.Thumbnail.childImageSharp
-                        .gatsbyImageData
-                    }
-                    style={Styled.BlogThumbnail}
-                    alt={blog.node.frontmatter.Thumbnail.base}
-                  />
-                </Styled.BlogThumbnailWrapper>
-                <Styled.BlogContentWrapper>
-                  <Styled.Tag>{blog.node.frontmatter.Tag}</Styled.Tag>
-                  <Styled.BlogTitle>
-                    {blog.node.frontmatter.Title}
-                  </Styled.BlogTitle>
-                  {/* <Styled.BlogCardCTA>
-                    {blog.node.frontmatter.CTAText}
-                    <StaticImage
-                      className="button_arrow"
-                      style={Styled.ButtonArrow}
-                      src="../../assets/images/global/arrow-green.svg"
-                      alt="Branding Image"
-                      placeholder="blurred"
-                      layout="fixed"
-                      width={24}
-                      height={24}
-                    />
-                  </Styled.BlogCardCTA> */}
-                  <TextButton data={blog} />
-                </Styled.BlogContentWrapper>
-              </Styled.BlogCard>
-            </div>
+            <BlogCard data={blog.node.frontmatter} key={blog.node.id} />
           ))}
         </Styled.BlogCollection>
       </div>

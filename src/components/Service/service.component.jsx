@@ -65,7 +65,10 @@ export const Service = () => {
         </Styled.TitleWrapper>
         <Styled.ServiceGrid>
           {data.allMarkdownRemark.edges.map((service) => (
-            <ServiceCard data={service} key={service.node.id} />
+            <ServiceCard
+              data={service.node.frontmatter}
+              key={service.node.id}
+            />
           ))}
         </Styled.ServiceGrid>
         <StaticImage
