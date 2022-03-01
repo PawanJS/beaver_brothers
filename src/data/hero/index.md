@@ -1,14 +1,14 @@
 ---
 category: 'hero section'
-WelcomeText: 'WELCOME TO NETZILA'
-Title: 'Elevate your brand with Netzila'
+WelcomeText: 'WELCOME from Beaver Brothers'
+Title: 'Elevate your brand with Beavers'
 Subtitle: 'Unlimited design subscriptions to your business.'
 TagLine: "Design you'll 💛 guaranteed"
 CTAText: 'Get Started'
 Slug: '/'
 Cover: './hero-person.png'
 HeroBannerText: 'Start growing with'
-HeroBannerBrand: 'Netzila'
+HeroBannerBrand: 'Beaver Brothers'
 HeroBannerCTAText: 'Learn More'
 HeroBannerCTALink: '/'
 ---
