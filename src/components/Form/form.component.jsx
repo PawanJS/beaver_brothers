@@ -23,7 +23,7 @@ export const Form = () => {
 
     axios({
       method: 'POST',
-      url: 'http://localhost:3002/send',
+      url: 'https://beaver-brothers.vercel.app/send',
       data: values,
     }).then((response) => {
       if (response.data.status === 'success') {
