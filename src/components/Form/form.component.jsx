@@ -23,7 +23,7 @@ export const Form = () => {
 
     axios({
       method: 'POST',
-      url: 'https://beaver-brothers.vercel.app/send',
+      url: 'https://beaver-brothers.herokuapp.com/send',
       data: values,
     }).then((response) => {
       if (response.data.status === 'success') {
