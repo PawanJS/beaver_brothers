@@ -24,7 +24,9 @@ export const Form = () => {
     axios({
       method: 'POST',
       url: 'https://beaver-brothers.herokuapp.com/send',
+      // url: 'http://localhost:3002/send',
       data: values,
+      mode: 'cors',
     }).then((response) => {
       if (response.data.status === 'success') {
         alert('Message Sent.');
