@@ -99,13 +99,13 @@ export const SubmitButton = styled.button`
 export const FormSuccessMessage = styled.div`
   background-color: #53847d;
   color: #fff;
-  display: none;
+  // display: none;
   padding: 20px;
   text-align: center;
 `;
 
 export const FormFailureMessage = styled.div`
-  display: none;
+  // display: none;
   margin-top: 10px;
   padding: 10px;
   background-color: #ffdede;

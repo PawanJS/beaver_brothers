@@ -10,6 +10,10 @@ export const Form = () => {
     message: '',
   });
 
+  const [form, setForm] = useState(true);
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setValues({
@@ -29,14 +33,15 @@ export const Form = () => {
       mode: 'cors',
     }).then((response) => {
       if (response.data.status === 'success') {
-        alert('Message Sent.');
         setValues({
           name: '',
           email: '',
           message: '',
         });
+        setForm(false);
+        setSuccessMessage(true);
       } else if (response.data.status === 'fail') {
-        alert('Message failed to send.');
+        setErrorMessage(true);
       }
     });
   };
@@ -44,55 +49,61 @@ export const Form = () => {
   return (
     <Styled.FormBlock>
       <Styled.FormWrapper>
-        <form onSubmit={handleSubmit}>
-          <label className="scr-reader" htmlFor="name">
-            name
-          </label>
-          <Styled.Input
-            type="text"
-            id="name"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-            placeholder="Name"
-            required
-          />
-          <label className="scr-reader" htmlFor="email">
-            email
-          </label>
-          <Styled.Input
-            type="email"
-            id="email"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-            placeholder="Email"
-            required
-          />
-          <label className="scr-reader" htmlFor="message">
-            message
-          </label>
-          <Styled.TextArea
-            type="email"
-            id="message"
-            name="message"
-            value={values.message}
-            onChange={handleChange}
-            placeholder="Message"
-            required
-          />
-          <Styled.FormButtonWrapper>
-            <Styled.SubmitButton value="submit">
-              Send Message
-            </Styled.SubmitButton>
-          </Styled.FormButtonWrapper>
-        </form>
-        <Styled.FormSuccessMessage>
-          Thank you! Your submission has been received!
-        </Styled.FormSuccessMessage>
-        <Styled.FormFailureMessage>
-          Oops! Something went wrong while submitting the form.
-        </Styled.FormFailureMessage>
+        {form && (
+          <form onSubmit={handleSubmit}>
+            <label className="scr-reader" htmlFor="name">
+              name
+            </label>
+            <Styled.Input
+              type="text"
+              id="name"
+              name="name"
+              value={values.name}
+              onChange={handleChange}
+              placeholder="Name"
+              required
+            />
+            <label className="scr-reader" htmlFor="email">
+              email
+            </label>
+            <Styled.Input
+              type="email"
+              id="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              placeholder="Email"
+              required
+            />
+            <label className="scr-reader" htmlFor="message">
+              message
+            </label>
+            <Styled.TextArea
+              type="email"
+              id="message"
+              name="message"
+              value={values.message}
+              onChange={handleChange}
+              placeholder="Message"
+              required
+            />
+            <Styled.FormButtonWrapper>
+              <Styled.SubmitButton value="submit">
+                Send Message
+              </Styled.SubmitButton>
+            </Styled.FormButtonWrapper>
+          </form>
+        )}
+        {successMessage && (
+          <Styled.FormSuccessMessage>
+            Thank you! Your submission has been received!
+          </Styled.FormSuccessMessage>
+        )}
+        {errorMessage && (
+          <Styled.FormFailureMessage>
+            Oops! Something went wrong while submitting the form.
+          </Styled.FormFailureMessage>
+        )}
       </Styled.FormWrapper>
     </Styled.FormBlock>
   );
