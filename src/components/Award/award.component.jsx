@@ -13,6 +13,7 @@ export const Award = () => {
         id
         frontmatter {
           Title
+          CTAText
         }
       }
       allMarkdownRemark(
@@ -35,6 +36,7 @@ export const Award = () => {
   `);
 
   const Award = data.markdownRemark.frontmatter;
+  console.log(Award.CTAText);
 
   return (
     <Styled.AwardSection>
@@ -74,7 +76,7 @@ export const Award = () => {
                 {award.node.frontmatter.Title}
               </Styled.AwardTitle>
               <Styled.AwardLine />
-              <TextButton data={award} />
+              <TextButton data={Award} />
             </Styled.AwardCard>
           ))}
         </Styled.AwardGrid>

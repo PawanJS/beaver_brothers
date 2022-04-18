@@ -9,6 +9,12 @@ export const FormBlock = styled.div`
   padding: 40px;
   background-color: #fff;
   box-shadow: 65px 65px 132px -24px hsla(0, 0%, 62%, 0.16);
+
+  @media only screen and (max-width: 580px) {
+    padding: 0;
+    top: 0;
+    background-color: transparent;
+  }
 `;
 
 export const FormWrapper = styled.div`

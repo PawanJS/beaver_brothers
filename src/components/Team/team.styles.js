@@ -16,6 +16,10 @@ export const TeamGrid = styled.div`
   @media screen and (max-width: 990px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media screen and (max-width: 580px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const TeamWrapper = styled(Link)`

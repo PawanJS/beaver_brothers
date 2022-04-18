@@ -1,5 +1,5 @@
 ---
 category: 'navigation'
-Link: 'Blog'
+Link: 'Home'
 Slug: '/'
 ---

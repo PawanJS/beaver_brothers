@@ -50,7 +50,7 @@ export const Navbar = () => {
               />
             </Styled.Brand>
             <Styled.NavigationLine />
-            <Styled.Email href="https://www.pawanjs.netlify.app">
+            <Styled.Email href="https:pawanjs.com/contact">
               hello@beaverbrothers.com
             </Styled.Email>
           </Styled.BrandWrapper>

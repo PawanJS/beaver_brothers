@@ -43,6 +43,11 @@ export const HeroTitle = styled.h1`
   line-height: 80px;
   font-weight: 700;
   letter-spacing: -0.04em;
+
+  @media only screen and (max-width: 580px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 `;
 
 export const CompanyStar = {
